@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public API's App</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="manisfest.json" rel="manifest" />
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+
+    <!-- iOS meta tags and icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="APIs" />
+    <link rel="apple-touch-icon" href="icons/152.png" />
+
+    <meta name="description" content="APIs" />
+    <meta name="theme-color" content="#522583" />
+  </head>
+
+  <body>
+    <header class="container-fluid fixed-top">
+      <img src="img/logo.jpg" class="logo" />
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('');"
+                  href="#"
+                  >Todos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Animals');"
+                  href="#"
+                  >Animais</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Anime');"
+                  href="#"
+                  >Anime</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Blockchain');"
+                  href="#"
+                  >Blockchain</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Books');"
+                  href="#"
+                  >Books</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Development');"
+                  href="#"
+                  >Development</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Finance');"
+                  href="#"
+                  >Finance</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Health');"
+                  href="#"
+                  >Health</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('News');"
+                  href="#"
+                  >News</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Open Source Projects');"
+                  href="#"
+                  >Open Source Projectss</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Programming');"
+                  href="#"
+                  >Programming</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Tracking');"
+                  href="#"
+                  >Tracking</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Social');"
+                  href="#"
+                  >Social</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="javascript:btCategoria('Weather');"
+                  href="#"
+                  >Weather</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="row cat-title">
+        <div class="col-12">
+          <h2 id="catTitle">Todas as APIs</h2>
+        </div>
+      </div>
+
+      <div class="row" id="content">
+        <div class="load-icon"></div>
+      </div>
+
+      <div class="row" id="load-area" style="display: none">
+        <div class="col-12">
+          <div class="d-grid gap-2">
+            <button
+              class="btn btn-secondary"
+              id="btLoadMore"
+              onclick="javascript:loadMore();"
+              type="button"
+            >
+              Carregar mais
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container-fluid fixed-bottom">
+      <button type="button" class="btn btn-info" hidden id="btInstall">
+        Instalar
+      </button>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      let swRegistro = null;
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("service-worker.js").then((reg) => {
+            console.log("Service Worker registrado com sucesso!");
+            swRegistro = reg;
+            initInstall();
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
